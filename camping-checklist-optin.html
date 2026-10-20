@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Free Camping Checklist | Camp With Confidence</title>
 <meta name="description" content="First-time camper? Get the free printable camping checklist and never forget an essential again. Instant download.">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -263,6 +264,13 @@ document.querySelectorAll('form[action="/api/subscribe"]').forEach((form)=>{
           email:form.elements.email.value.trim()
         })
       });
+      const contentType=response.headers.get('content-type')||'';
+      if(!contentType.includes('application/json')){
+        if(response.status===404){
+          throw new Error('Signup API is not deployed yet. Redeploy the latest project on Vercel, including api/subscribe.js.');
+        }
+        throw new Error(`Signup server returned an unexpected response (${response.status}). Please try again later.`);
+      }
       const result=await response.json();
       if(!response.ok) throw new Error(result.error||'Signup failed. Please try again.');
       status.textContent='Thanks for signing up! Check your inbox for the checklist.';

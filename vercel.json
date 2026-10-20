@@ -1,4 +1,10 @@
 {
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "functions": {
+    "api/subscribe.js": {
+      "maxDuration": 10
+    }
+  },
   "rewrites": [
     {
       "source": "/",
