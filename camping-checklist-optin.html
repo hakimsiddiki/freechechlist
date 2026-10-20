@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Free Camping Checklist | Camp With Confidence</title>
+<meta name="description" content="First-time camper? Get the free printable camping checklist and never forget an essential again. Instant download.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--forest:#1f4d3a;--forest-d:#163a2b;--leaf:#2f7a57;--sand:#f7f4ec;--cream:#fffdf8;--orange:#f27a1a;--orange-d:#d6650d;--ink:#22302a;--muted:#5d6b63;--line:#e3e0d3;
+--font:"Poppins",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:var(--font);color:var(--ink);background:var(--cream);line-height:1.65}
+.wrap{max-width:1040px;margin:0 auto;padding:0 22px}
+h1,h2,h3,h4{line-height:1.2;margin:0 0 10px;color:var(--forest-d)}
+p{margin:0 0 14px}
+a{color:var(--orange-d)}
+:focus-visible{outline:3px solid var(--orange);outline-offset:3px}
+section{padding:72px 0}
+.center{text-align:center}
+.sub{max-width:620px;margin:0 auto 38px;color:var(--muted)}
+h2{font-size:clamp(1.7rem,4vw,2.4rem);font-weight:800}
+
+/* hero */
+.hero{background:linear-gradient(160deg,var(--forest-d),var(--forest) 60%,var(--leaf));color:#fff;padding:64px 0 76px}
+.pills{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-bottom:28px}
+.pill{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.3);padding:6px 14px;border-radius:999px;font-size:.88rem;font-weight:500}
+.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:center}
+.hero h1{color:#fff;font-size:clamp(2.1rem,5vw,3.3rem);font-weight:800;letter-spacing:-.01em}
+.hero h1 span{color:#ffc58a}
+.hero p.lead{font-size:1.1rem;color:#e3efe7;max-width:32em}
+.price{display:flex;gap:12px;align-items:baseline;margin:18px 0 18px}
+.price b{font-size:2rem;color:#ffc58a}
+.price s{opacity:.7}
+.price em{font-style:normal;background:#ffc58a;color:var(--forest-d);font-weight:700;border-radius:6px;padding:2px 10px;font-size:.85rem}
+form{display:grid;gap:12px;max-width:430px}
+label{font-weight:600;font-size:.92rem}
+input[type=text],input[type=email]{width:100%;padding:14px 16px;font:inherit;border:2px solid transparent;border-radius:12px;background:#fff;color:var(--ink)}
+input:focus{outline:none;border-color:var(--orange);box-shadow:0 0 0 3px rgba(242,122,26,.3)}
+.form-status{margin:0;font-size:.92rem}
+.form-status[hidden]{display:none}
+.form-status[data-state=error]{color:#b42318}
+.form-status[data-state=success]{color:var(--leaf)}
+.btn{display:inline-block;text-align:center;text-decoration:none;font:inherit;font-weight:700;font-size:1.05rem;padding:15px 26px;border:0;border-radius:12px;background:var(--orange);color:#fff;cursor:pointer;transition:background .15s,transform .15s}
+.btn:hover{background:var(--orange-d)}
+.btn:active{transform:translateY(1px)}
+.btn.alt{background:var(--forest);}
+.btn.alt:hover{background:var(--forest-d)}
+.trust{font-size:.86rem;color:#cfe3d6;margin:6px 0 0}
+
+/* guide card */
+.card-hero{background:var(--cream);color:var(--ink);border-radius:20px;padding:30px 28px;box-shadow:0 20px 40px rgba(0,0,0,.25)}
+.card-hero h3{font-size:1.35rem}
+.card-hero small{color:var(--muted);display:block;margin-bottom:14px}
+.ticks{list-style:none;margin:0;padding:0}
+.ticks li{padding:7px 0 7px 32px;position:relative;border-bottom:1px dashed var(--line);font-weight:500}
+.ticks li:last-child{border:0}
+.ticks li::before{content:"✓";position:absolute;left:0;top:7px;width:22px;height:22px;border-radius:50%;background:var(--leaf);color:#fff;font-size:.8rem;display:grid;place-items:center;font-weight:700}
+
+/* grids */
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.card{background:#fff;border:1px solid var(--line);border-radius:18px;padding:26px 24px}
+.card .ico{font-size:2rem;display:block;margin-bottom:8px}
+.card h3,.card h4{font-size:1.1rem}
+.card p{color:var(--muted);margin:0;font-size:.97rem}
+.bg-sand{background:var(--sand)}
+.problem{border-top:5px solid #d9534f}
+.solution{border-top:5px solid var(--orange)}
+.result{border-top:5px solid var(--leaf)}
+
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;counter-reset:s}
+.step{counter-increment:s;text-align:center;padding:0 10px}
+.step::before{content:counter(s);display:grid;place-items:center;width:52px;height:52px;margin:0 auto 14px;border-radius:50%;background:var(--forest);color:#fff;font-weight:800;font-size:1.25rem}
+.step p{color:var(--muted)}
+
+/* upsell */
+.upsell{background:var(--forest-d);color:#e3efe7;border-radius:24px;padding:42px 36px;display:grid;grid-template-columns:1.2fr .8fr;gap:32px;align-items:center}
+.upsell h2{color:#fff;font-size:1.8rem}
+.upsell .price b{font-size:2.2rem}
+
+/* faq */
+details{background:#fff;border:1px solid var(--line);border-radius:14px;padding:4px 20px;margin-bottom:12px;max-width:760px;margin-left:auto;margin-right:auto}
+summary{cursor:pointer;font-weight:600;padding:14px 0;list-style:none;display:flex;justify-content:space-between;gap:14px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";font-size:1.4rem;line-height:1;color:var(--orange-d)}
+details[open] summary::after{content:"–"}
+details p{color:var(--muted)}
+
+.final{background:linear-gradient(160deg,var(--forest-d),var(--forest));color:#fff;text-align:center}
+.final h2{color:#fff}
+.final form{margin:0 auto;text-align:left}
+footer{background:#10281d;color:#a9bfb1;padding:40px 0;text-align:center;font-size:.9rem}
+footer h4{color:#fff;font-size:1.15rem}
+footer a{color:#ffc58a;margin:0 8px}
+
+@media (max-width:860px){
+  .hero-grid,.upsell{grid-template-columns:1fr}
+  .grid3,.steps{grid-template-columns:1fr}
+  section{padding:52px 0}
+  .upsell{padding:32px 24px}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+
+<header class="hero" id="top">
+  <div class="wrap">
+    <div class="pills">
+      <span class="pill">📋 Checklist-Based</span>
+      <span class="pill">📥 Instant Download</span>
+      <span class="pill">⭐ Beginner-Friendly</span>
+    </div>
+    <div class="hero-grid">
+      <div>
+        <h1>Never Forget a Camping Essential Again. <span>Camp With Full Confidence.</span></h1>
+        <p class="lead">First-time camper? Scared you'll forget something important? Get the free printable camping checklist. Just download, print and tick it off.</p>
+        <div class="price"><b>FREE</b><s>$9.99</s><em>Limited-time download</em></div>
+
+        <form action="/api/subscribe" method="post">
+          <label for="n1">First name</label>
+          <input type="text" id="n1" name="name" autocomplete="given-name" placeholder="Your first name" maxlength="100">
+          <label for="e1">Email address</label>
+          <input type="email" id="e1" name="email" autocomplete="email" placeholder="you@example.com" maxlength="254" required>
+          <button type="submit" class="btn">🚀 Send Me The Free Checklist</button>
+          <p class="trust">🔒 No spam • 📄 PDF format • ✨ Unsubscribe anytime</p>
+          <p class="form-status" role="status" aria-live="polite" hidden></p>
+        </form>
+      </div>
+
+      <aside class="card-hero">
+        <h3>🏕️ The Camping Checklist</h3>
+        <small>Print. Tick. Camp.</small>
+        <ul class="ticks">
+          <li>Master Packing List</li>
+          <li>Clothing &amp; Toiletries</li>
+          <li>Documents &amp; Money</li>
+          <li>First Aid Essentials</li>
+          <li>Space for Your Own Notes</li>
+        </ul>
+      </aside>
+    </div>
+  </div>
+</header>
+
+<section>
+  <div class="wrap center">
+    <h2>Camping Should Be Fun, Not Stressful</h2>
+    <p class="sub">Most beginners waste hours worrying about what to pack. One simple checklist fixes that.</p>
+    <div class="grid3" style="text-align:left">
+      <div class="card problem"><span class="ico">⚠️</span><h3>The Problem</h3><p>Forgetting the essentials, packing in a rush, or feeling unprepared can turn your adventure into a stressful experience.</p></div>
+      <div class="card solution"><span class="ico">✅</span><h3>Our Solution</h3><p>A simple, printable checklist that walks you through every category, so you tick items off instead of trying to remember them.</p></div>
+      <div class="card result"><span class="ico">🎉</span><h3>The Result</h3><p>You arrive confident, prepared and ready for anything. Your best camping trips start here.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="bg-sand">
+  <div class="wrap center">
+    <h2>What's On The Checklist</h2>
+    <p class="sub">Everything you carry for the trip, on one printable page.</p>
+    <div class="grid3" style="text-align:left">
+      <div class="card"><span class="ico">👕</span><h4>Clothing</h4><p>Layers, rain jacket, wool socks, sleepwear and the right shoes.</p></div>
+      <div class="card"><span class="ico">🧴</span><h4>Toiletries</h4><p>Biodegradable soap, sunscreen, repellent, quick-dry towel and trowel.</p></div>
+      <div class="card"><span class="ico">🪪</span><h4>Documents &amp; Money</h4><p>ID, campsite reservation, park pass, cash and emergency contacts.</p></div>
+      <div class="card"><span class="ico">🩹</span><h4>First Aid</h4><p>Bandages, blister care, medication and an emergency blanket.</p></div>
+      <div class="card"><span class="ico">🔋</span><h4>Personal Extras</h4><p>Phone and power bank, sunglasses, camera, daypack and water bottle.</p></div>
+      <div class="card"><span class="ico">📝</span><h4>Notes &amp; Extras</h4><p>Trip, dates and campers fields, plus room for anything trip-specific.</p></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap center">
+    <h2>How It Works</h2>
+    <p class="sub">Three steps and you're packing smarter.</p>
+    <div class="steps">
+      <div class="step"><h4>Enter your email</h4><p>Fill in the form. It takes a few seconds.</p></div>
+      <div class="step"><h4>Check your inbox</h4><p>Your download link arrives right away. Check spam or promotions if you can't see it.</p></div>
+      <div class="step"><h4>Print and pack</h4><p>Print on US Letter paper and tick items off as they go in the bag.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="bg-sand">
+  <div class="wrap">
+    <div class="upsell">
+      <div>
+        <h2>Want the full guide too?</h2>
+        <p>The Ultimate Camping Guide goes beyond the checklist: campsite selection, step-by-step setup, weather and wildlife prep, first aid basics and 5 campfire recipes. 30+ pages, instant PDF download.</p>
+        <div class="price"><b>$14.99</b><s>$29.99</s></div>
+        <a class="btn" href="https://payhip.com/b/fbBIt">🚀 Get The Ultimate Camping Guide</a>
+      </div>
+      <ul class="ticks" style="color:#e3efe7">
+        <li style="border-color:rgba(255,255,255,.2)">Perfect Campsite Selection</li>
+        <li style="border-color:rgba(255,255,255,.2)">Packing Checklists</li>
+        <li style="border-color:rgba(255,255,255,.2)">Step-by-Step Setup</li>
+        <li style="border-color:rgba(255,255,255,.2)">Pro Survival Tips</li>
+        <li>Bonus: Campfire Recipes</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2 class="center">Frequently Asked Questions</h2>
+    <p class="sub center">Quick answers before you download.</p>
+    <details><summary>What format is the checklist?</summary><p>A high-quality PDF in US Letter size. Read it on any device or print it for offline use.</p></details>
+    <details><summary>Is it really free?</summary><p>Yes. Enter your email and we'll send you the download link. No payment is needed.</p></details>
+    <details><summary>Is this for complete beginners?</summary><p>Absolutely. It covers the basics every camper needs, so it works for first trips and for experienced campers who want a reliable list.</p></details>
+    <details><summary>Will you send me other emails?</summary><p>You'll get your download link first, then occasional camping tips. You can unsubscribe at any time with one click.</p></details>
+    <details><summary>I didn't get my email. What now?</summary><p>Check your spam or promotions folder. If it isn't there, sign up again with the correct address or contact support.</p></details>
+  </div>
+</section>
+
+<section class="final" id="get">
+  <div class="wrap">
+    <h2>Ready For Your Best Adventure Yet?</h2>
+    <p class="sub" style="color:#cfe3d6">Get your free camping checklist today and start every trip prepared, confident and stress-free.</p>
+    <form action="/api/subscribe" method="post">
+      <label for="n2">First name</label>
+      <input type="text" id="n2" name="name" autocomplete="given-name" placeholder="Your first name" maxlength="100">
+      <label for="e2">Email address</label>
+      <input type="email" id="e2" name="email" autocomplete="email" placeholder="you@example.com" maxlength="254" required>
+      <button type="submit" class="btn">🚀 Send Me The Free Checklist</button>
+      <p class="trust">By subscribing you agree to receive emails from Flip And Reads. Unsubscribe anytime.</p>
+      <p class="form-status" role="status" aria-live="polite" hidden></p>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <h4>🏕️ Flip And Reads</h4>
+    <p>Helping outdoor lovers adventure with confidence, one guide at a time.</p>
+    <p><a href="https://payhip.com/b/fbBIt">Get the Guide</a><a href="#">Contact Support</a><a href="#">Privacy Policy</a><a href="#">Terms of Use</a></p>
+    <p>&copy; <span id="yr">2026</span> Flip And Reads. All rights reserved.<br>This is a digital product. No physical item will be shipped.</p>
+  </div>
+</footer>
+<script>
+document.getElementById('yr').textContent=new Date().getFullYear();
+document.querySelectorAll('form[action="/api/subscribe"]').forEach((form)=>{
+  form.addEventListener('submit',async(event)=>{
+    event.preventDefault();
+    const button=form.querySelector('button[type="submit"]');
+    const status=form.querySelector('.form-status');
+    const originalLabel=button.textContent;
+    button.disabled=true;
+    button.textContent='Sending...';
+    status.hidden=true;
+    status.removeAttribute('data-state');
+
+    try{
+      const response=await fetch(form.action,{
+        method:'POST',
+        headers:{'Content-Type':'application/json'},
+        body:JSON.stringify({
+          name:form.elements.name.value.trim(),
+          email:form.elements.email.value.trim()
+        })
+      });
+      const result=await response.json();
+      if(!response.ok) throw new Error(result.error||'Signup failed. Please try again.');
+      status.textContent='Thanks for signing up! Check your inbox for the checklist.';
+      status.dataset.state='success';
+      form.reset();
+    }catch(error){
+      status.textContent=error instanceof TypeError
+        ?'Could not reach the signup server. Open the live Vercel website and try again.'
+        :error.message||'Unable to submit right now. Please try again.';
+      status.dataset.state='error';
+    }finally{
+      status.hidden=false;
+      button.disabled=false;
+      button.textContent=originalLabel;
+    }
+  });
+});
+</script>
+</body>
+</html>
